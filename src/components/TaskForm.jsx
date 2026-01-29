@@ -1,30 +1,27 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 function TaskForm({ onAdd }) {
-    const [text, setText] = useState("");
+    const [text, setText] = useState('');
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // prevents page reference
+        e.preventDefault(); // Stop page refresh
+        if (!text) return; // Prevent empty tasks
 
-        if (!text) return;
-
-        //send the text up to App.jsx
-        onAdd(text);
-        setText("");
+        onAdd(text); // Call the function passed from App.jsx
+        setText(''); // Clear input
     };
+
     return (
-        <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }} >
-            <h1>Form</h1>
+        <form onSubmit={handleSubmit} style={{ margin: '20px 0' }}>
             <input
                 type="text"
+                placeholder="Add a new task..."
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                placeholder="Add a new task..."
             />
             <button type="submit">Add Task</button>
         </form>
     );
-
 }
 
 export default TaskForm;
