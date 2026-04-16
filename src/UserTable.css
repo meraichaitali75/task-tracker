@@ -1,0 +1,43 @@
+/* UserTable.css */
+
+.citi-table-container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.citi-table {
+    width: 100%;
+    border-collapse: collapse; /* Merges double borders into one */
+    margin-top: 20px;
+    background-color: white;
+}
+
+.table-header {
+    background-color: #00447C; /* Citi Blue */
+    color: white;
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.table-cell {
+    padding: 12px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+/* Hover effect: Great for UI interviews! */
+.table-row:hover {
+    background-color: #f1f1f1;
+}
+
+.loading-text {
+    padding: 20px;
+    font-weight: bold;
+}
+
+.error-text {
+    color: red;
+    padding: 20px;
+}

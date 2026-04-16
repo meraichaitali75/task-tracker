@@ -1,0 +1,177 @@
+/* App.css */
+:root {
+  --primary-color: #00447C;
+  /* Citi Brand Blue */
+  --accent-color: #0076CE;
+  --bg-color: #f0f2f5;
+  --text-dark: #333;
+  --text-light: #666;
+  --border-radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 24px;
+  border-left: 5px solid var(--primary-color);
+  padding-left: 15px;
+}
+
+/* FORM STYLING */
+.user-form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two columns */
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.input-group input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.button-container {
+  grid-column: span 2;
+  /* Button takes full width */
+  margin-top: 10px;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-color);
+}
+
+/* TABLE STYLING */
+.table-wrapper {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  /* Rounds the table corners */
+}
+
+.citi-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header {
+  background-color: #fafafa;
+  color: var(--text-dark);
+  padding: 16px;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 2px solid #eee;
+}
+
+.table-cell {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  color: var(--text-dark);
+}
+
+.table-row:hover {
+  background-color: #f9fbff;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-light);
+  padding: 40px;
+}
+
+/* App.css additions */
+
+.actions-cell {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-input {
+  width: 90%;
+  padding: 4px;
+  border: 1px solid #0076CE;
+}
